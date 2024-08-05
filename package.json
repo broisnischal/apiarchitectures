@@ -5,7 +5,9 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
-    "export": "slidev export"
+    "export": "slidev export",
+    "deploy": "netlify deploy --prod",
+    "deploy:push": "npx run build && npx slidev deploy"
   },
   "dependencies": {
     "@slidev/cli": "^0.49.23",
