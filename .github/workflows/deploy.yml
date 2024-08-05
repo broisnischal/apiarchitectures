@@ -1,4 +1,4 @@
-name: Deploying to Netlify
+name: Deploy to Netlify
 
 on:
   push:
@@ -22,15 +22,48 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: npm run build
+        run: node --max-old-space-size=4096 ./node_modules/.bin/vite build # Increase memory limit
 
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.2
+        uses: nwtgck/actions-netlify@v1.2.3
         with:
           publish-dir: dist # Update this if your build output directory is different
           production-deploy: true
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+# name: Deploying to Netlify
+
+# on:
+#   push:
+#     branches:
+#       - main # Change to your main branch if it's different
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v2
+
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: 20
+
+#       - name: Install dependencies
+#         run: npm install
+
+#       - name: Build project
+#         run: npm run build
+
+#       - name: Deploy to Netlify
+#         uses: nwtgck/actions-netlify@v1.2
+#         with:
+#           publish-dir: dist # Update this if your build output directory is different
+#           production-deploy: true
+#           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+#           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+#         env:
+#           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+#           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
