@@ -1,4 +1,5 @@
-name: Deploy to Netlify
+# .github/workflows/netlify.yml
+name: Build and Deploy to Netlify
 
 on:
   push:
@@ -7,39 +8,66 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-
+    runs-on: ubuntu-18.04
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-        env:
-          NODE_OPTIONS: "--max_old_space_size=8192"
-
-      - name: Install dependencies
-        env:
-          NODE_OPTIONS: "--max_old_space_size=8192"
-        run: npm install
-
-      - name: Build project
-        env:
-          NODE_OPTIONS: "--max_old_space_size=8192"
-        run: node run build # Increase memory limit
-        # run: node --max-old-space-size=4096 ./node_modules/.bin/vite build # Increase memory limit
+      - uses: actions/checkout@v2
 
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.2.3
-        env:
-          NODE_OPTIONS: "--max_old_space_size=8192"
+        uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: dist # Update this if your build output directory is different
-          production-deploy: true
+          publish-dir: "./dist"
+          production-branch: main
+          # github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          # enable-pull-request-comment: false
+          # enable-commit-comment: true
+          # overwrites-pull-request-comment: true
+        env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
+# name: Deploy to Netlify
+
+# on:
+#   push:
+#     branches:
+#       - main # Change to your main branch if it's different
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v2
+
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: 20
+#         env:
+#           NODE_OPTIONS: "--max_old_space_size=8192"
+
+#       - name: Install dependencies
+#         env:
+#           NODE_OPTIONS: "--max_old_space_size=8192"
+#         run: npm install
+
+#       - name: Build project
+#         env:
+#           NODE_OPTIONS: "--max_old_space_size=8192"
+#         run: node run build # Increase memory limit
+#         # run: node --max-old-space-size=4096 ./node_modules/.bin/vite build # Increase memory limit
+
+#       - name: Deploy to Netlify
+#         uses: nwtgck/actions-netlify@v1.2.3
+#         env:
+#           NODE_OPTIONS: "--max_old_space_size=8192"
+#         with:
+#           publish-dir: dist # Update this if your build output directory is different
+#           production-deploy: true
+#           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+#           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 # name: Deploying to Netlify
 
 # on:
