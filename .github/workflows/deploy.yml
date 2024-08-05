@@ -17,12 +17,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
 
       - name: Install dependencies
         run: npm install
 
       - name: Build project
-        run: node --max-old-space-size=4096 ./node_modules/.bin/vite build # Increase memory limit
+        run: node run build # Increase memory limit
+        # run: node --max-old-space-size=4096 ./node_modules/.bin/vite build # Increase memory limit
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2.3
