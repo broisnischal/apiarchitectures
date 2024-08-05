@@ -4,6 +4,7 @@ command = "npm run build"
 
 [build.environment]
 NODE_VERSION = "20"
+NODE_OPTION = '--max_old_space_size=8192'
 
 [[redirects]]
 from = "/.well-known/*"
