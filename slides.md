@@ -1,36 +1,108 @@
 ---
 # You can also start simply with 'default'
-theme: seriph
+theme: geist
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 # background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
-title: Welcome to slides
+title: API Presentation by Nishcal Dahal
+description: API Architectures
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
 
   Learn more at [Sli.dev](https://sli.dev)
 # apply unocss classes to the current slide
-class: text-center
+class: w-[80%] m-auto
+
+twoslash: true
+highlighter: shiki
+favicon: 'https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png'
 # https://sli.dev/features/drawing
-drawings:
-  persist: false
+addons:
+  - excalidraw
 # slide transition: https://sli.dev/guide/animations.html#slide-transitions
-transition: slide-left
+transition: view-transition
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
+
+themeConfig:
+  primary: '#9826ab'
+  secondary: '#25660e'
+  primary-highlight: '#e7e7e710'
+  secondary-highlight: '#efefef10'
+layout: center
+
+drawings:
+  enabled: true
+  persist: false
+  presenterOnly: false
+  syncAll: true
+
+# HTML tag attributes
+htmlAttrs:
+  dir: ltr
+  lang: en
 ---
 
-# API Architectures
 
-API architectures and tooling, when to choose what, and when to choose how.
+# Nischal presents
+---
+layout: center
+transition: slide-right
+class: w-[80%] m-auto text-primary
+# background: '#000'
+---
 
-|                    |             |
+# La aayo presentation!
+<span v-mark.underline>dhila ta vayena ni?</span>
+
+---
+layout: cover
+transition: slide-right
+class: w-[80%] m-auto
+image: /images/qr.png
+---
+
+
+<div class="flex gap-10 items-start justify-center">
+
+
+<img src="https://github.com/broisnischal.png" alt="Nischal Dahal" class="w-32 h-32 mt-10 rounded-full" />
+
+<div> 
+<h1 class='leading-none'>Nischal Dahal</h1>
+
+- Software Engineer at <KBD>[AITC](https://aitc.ai/)</KBD>
+- <KBD>+4</KBD  > Years of Professional Experiences
+- Nepal, Mainapokhari, Dolakha
+- Blog & Portfolio <KBD>[nischal-dahal.com](https://nischal-dahal.com.np)</KBD>
+-  <span v-mark.underline.orange>Say Hi on</span> <KBD>[X - broisnees](https://x.com/broisnees)</KBD>, <span v-mark.underline.green> Follow me on</span> <KBD>[github.com/broisnischal](https://github.com/broisnischal)</KBD> and connect on Linkedin [broisnees](https://linked.com/in/broisnees)
+</div>
+
+</div>
+
+
+
+<!-- <div
+  v-motion
+  :initial="{ x: -80 }"
+  :enter="{ x: 0 }"
+  :leave="{ x: 80 }"
+>
+  Slidev
+</div> -->
+
+
+<!-- <KBD>I'm a Keyboard Input</KBD> -->
+
+<!-- # API Architectures -->
+
+<!-- |                    |             |
 | ------------------ | ----------- |
 | <kbd>REST </kbd>   | Restful API |
 | <kbd>GraphQL</kbd> | Restful API |
-| <kbd>gRPC</kbd>    | Restful API |
+| <kbd>gRPC</kbd>    | Restful API | -->
 
 <!-- <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -38,7 +110,7 @@ API architectures and tooling, when to choose what, and when to choose how.
   </span> -->
 <!-- </div> -->
 
-<div class="abs-br m-6 flex gap-2">
+<!-- <div class="abs-br m-6 flex gap-2">
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:edit />
   </button>
@@ -46,31 +118,44 @@ API architectures and tooling, when to choose what, and when to choose how.
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
-</div>
+</div> -->
+
 
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
 
+
+
+---
+layout: cover
+class: w-[80%] m-auto
+transition: slide-down
+
 ---
 
-## transition: fade-out
 
-# What is Slidev?
+## Todays Agenda
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+What we are going to focus and learn about 
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
+- 📝 **API** - What is API?
+<v-clicks>
+
+- 🎨 **API Scalability** - Why a scalability?
+- 🧑‍💻 **API Testing** - types of API Testing
+- 🤹 **Architectures** - How to work with different API arch as non backend developer.
+- 🎥 **Serverless** - What is serverless and why to adopt?
+- 🛠 **Monorepo,Microservices** - virtually anything that's possible on a webpage is possible in Slidev
+- 📤 **Remix?** - why it? 
+
+</v-clicks>
+
   <br>
   <br>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+Read more about [api?](https://sli.dev/guide/why)
+
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -78,7 +163,7 @@ Learn more: https://sli.dev/features/slide-scope-style
 -->
 
 <style>
-h1 {
+h2 {
   background-color: #2B90B6;
   background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
   background-size: 100%;
@@ -94,10 +179,15 @@ Here is another comment.
 -->
 
 ---
-
-transition: slide-up
 level: 2
+class: w-[80%] m-auto text-center
+layout: center
+---
 
+#### Last but not least
+# Artificial Intelligence
+
+---
 ---
 
 # Navigation
@@ -600,6 +690,9 @@ dragPos:
 square: 0,-4,0,0
 
 ---
+dragPos:
+  square: 0,-4,0,0
+---
 
 # Draggable Elements
 
@@ -646,6 +739,7 @@ src: ./pages/imported-slides.md
 hide: false
 
 ---
+
 
 ---
 
