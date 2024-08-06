@@ -4,7 +4,6 @@ command = "npm run build"
 
 [build.environment]
 NODE_VERSION = "20"
-# NODE_OPTION = '--max_old_space_size=8192'
 
 [[redirects]]
 from = "/.well-known/*"
@@ -13,5 +12,5 @@ status = 200
 
 [[redirects]]
 from = "/*"
-to = "/index.html"
+to = "/dist/index.html"
 status = 200

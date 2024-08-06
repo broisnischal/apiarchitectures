@@ -146,6 +146,7 @@ What we are going to focus and learn about
 - 🧑‍💻 **API Testing** - types of API Testing
 - 🤹 **Architectures** - How to work with different API arch as non backend developer.
 - 🎥 **Serverless** - What is serverless and why to adopt?
+- 🎥 **Edge Functions** - Serve fast, personalized content with logic that executes at the edge.
 - 🛠 **Monorepo,Microservices** - virtually anything that's possible on a webpage is possible in Slidev
 - 📤 **Remix?** - why it? 
 
