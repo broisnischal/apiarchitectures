@@ -5,19 +5,15 @@ theme: geist
 # like them? see https://unsplash.com/collections/94734566/slidev
 # background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
-title: API Presentation by Nishcal Dahal
+title: API Architectures and Principles by Nischal Dahal
 description: API Architectures
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
+  # API Presentation
 # apply unocss classes to the current slide
 class: w-[80%] m-auto
-
 twoslash: true
 highlighter: shiki
-favicon: 'https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png'
+favicon: "https://avatars.githubusercontent.com/u/98168009?v=4"
 # https://sli.dev/features/drawing
 addons:
   - excalidraw
@@ -27,17 +23,17 @@ transition: view-transition
 mdc: true
 
 themeConfig:
-  primary: '#9826ab'
-  secondary: '#25660e'
-  primary-highlight: '#e7e7e710'
-  secondary-highlight: '#efefef10'
-layout: center
+  primary: "#9826ab"
+  secondary: "#25660e"
+  primary-highlight: "#e7e7e710"
+  secondary-highlight: "#efefef10"
+# layout: center
 
 drawings:
   enabled: true
   persist: false
   presenterOnly: false
-  syncAll: true
+  syncAll:
 
 # HTML tag attributes
 htmlAttrs:
@@ -45,16 +41,16 @@ htmlAttrs:
   lang: en
 ---
 
-
 # Nischal presents
+
 ---
 layout: center
 transition: slide-right
 class: w-[80%] m-auto text-primary
-# background: '#000'
 ---
 
 # La aayo presentation!
+
 <span v-mark.underline>dhila ta vayena ni?</span>
 
 ---
@@ -64,9 +60,7 @@ class: w-[80%] m-auto
 image: /images/qr.png
 ---
 
-
 <div class="flex gap-10 items-start justify-center">
-
 
 <img src="https://github.com/broisnischal.png" alt="Nischal Dahal" class="w-32 h-32 mt-10 rounded-full" />
 
@@ -77,12 +71,10 @@ image: /images/qr.png
 - <KBD>+4</KBD  > Years of Professional Experiences
 - Nepal, Mainapokhari, Dolakha
 - Blog & Portfolio <KBD>[nischal-dahal.com](https://nischal-dahal.com.np)</KBD>
--  <span v-mark.underline.orange>Say Hi on</span> <KBD>[X - broisnees](https://x.com/broisnees)</KBD>, <span v-mark.underline.green> Follow me on</span> <KBD>[github.com/broisnischal](https://github.com/broisnischal)</KBD> and connect on Linkedin [broisnees](https://linked.com/in/broisnees)
+- <span v-mark.underline.orange>Say Hi on</span> <KBD>[X - broisnees](https://x.com/broisnees)</KBD>, <span v-mark.underline.green> Follow me on</span> <KBD>[github.com/broisnischal](https://github.com/broisnischal)</KBD> and connect on Linkedin [broisnees](https://linked.com/in/broisnees)
 </div>
 
 </div>
-
-
 
 <!-- <div
   v-motion
@@ -92,7 +84,6 @@ image: /images/qr.png
 >
   Slidev
 </div> -->
-
 
 <!-- <KBD>I'm a Keyboard Input</KBD> -->
 
@@ -120,26 +111,22 @@ image: /images/qr.png
   </a>
 </div> -->
 
-
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
-
-
 
 ---
 layout: cover
 class: w-[80%] m-auto
 transition: slide-down
-
 ---
-
 
 ## Todays Agenda
 
-What we are going to focus and learn about 
+What we are going to focus and learn about
 
-- 📝 **API** - What is API?
+- 📝 **API** - What is API and types of APIs?
+
 <v-clicks>
 
 - 🎨 **API Scalability** - Why a scalability?
@@ -148,7 +135,7 @@ What we are going to focus and learn about
 - 🎥 **Serverless** - What is serverless and why to adopt?
 - 🎥 **Edge Functions** - Serve fast, personalized content with logic that executes at the edge.
 - 🛠 **Monorepo,Microservices** - virtually anything that's possible on a webpage is possible in Slidev
-- 📤 **Remix?** - why it? 
+- 📤 **Remix?** - why it?
 
 </v-clicks>
 
@@ -156,7 +143,6 @@ What we are going to focus and learn about
   <br>
 
 Read more about [api?](https://sli.dev/guide/why)
-
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -180,46 +166,94 @@ Here is another comment.
 -->
 
 ---
-level: 2
+level: 1
 class: w-[80%] m-auto text-center
 layout: center
 ---
-
-#### Last but not least
 # Artificial Intelligence
 
----
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-## Keyboard Shortcuts
-
-|                                                    |                             |
-| -------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                | next animation or slide     |
-| <kbd>left</kbd> / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                      | previous slide              |
-| <kbd>down</kbd>                                    | next slide                  |
-
-<!-- https://sli.dev/guide/animations.html#click-animation -->
-
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+How AI can be integrated in our application?
 
 ---
 
+---
+level: 2
+class: w-[80%] m-auto
+layout: center
+---
+
+# API
+
+Two software components to communicate with each other using a set of definitions and protocols!
+
+#### <span v-mark="{ color: '#234', type: 'circle' }">Our process</span> 
+
+
+
+<div v-click> API baneko xaina </div>
+<div v-click> Data aako xaina </div>
+<div v-click> Backend ko issue ho! </div>
+<div v-click> Count nai mistake chha! </div>
+<div v-click> Tapaile check garnu vako thyena? </div>
+
+
+<!-- <Arrow v-bind="{ x1:10, y1:10, x2:200, y2:200 }" /> -->
+
+
+
+<p v-click class="absolute bottom-10 left-45 transform -rotate-10">AITC!</p>
+
+---
+level: 1
+class: w-[80%] m-auto
+layout: two-cols
+---
+
+# Types of APIs
+
+<div v-click>Private APIs</div>
+<div v-click>Public APIs</div>
+<div v-click>Open APIs</div>
+<div v-click>Partner APIs</div>
+<div v-click>Composite APIs</div>
+
+<p v-after class="absolute bottom-23 left-45 transform -rotate-10">Here!</p>
+
+
+
+
+::right::
+
+<div v-click class="text-2xl"> How to create an API? </div>
+<br/>
+<div v-click>Plan the API</div>
+<div v-click>Build the API</div>
+<div v-click>Test the API</div>
+<div v-click>Document the API</div>
+<div v-click>Market the API</div>
+
+---
+layout: two-cols-header
+class: w-[80%] m-auto
+---
+
+This spans both
+
+::left::
+
+# Left
+
+This shows on the left
+
+::right::
+
+# Right
+
+This shows on the right
+
+---
 layout: two-cols
 layoutClass: gap-16
-
 ---
 
 # Table of contents
@@ -691,8 +725,13 @@ dragPos:
 square: 0,-4,0,0
 
 ---
+
 dragPos:
-  square: 0,-4,0,0
+square: 0,-4,0,0
+
+---
+dragPos:
+  square: 0,-89,0,0
 ---
 
 # Draggable Elements
