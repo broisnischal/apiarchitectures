@@ -591,6 +591,26 @@ class: w-[80%] m-auto
 
 
 ---
+layout: iframe-right
+class: w-[80%] m-auto
+url: https://nischal-dahal.com.np/blog/where-to-host-your-modern-applications
+---
+
+### Edge Computing
+
+Edge Computing refers to processing data closer to the source of data generation rather than relying on a centralized data-processing warehouse. It minimizes latency, reduces bandwidth usage, and enhances real-time data processing.
+
+Key Advantages
+
+- Reduced Latency: Faster response times for applications requiring real-time data processing.
+- Bandwidth Efficiency: Reduces the amount of data sent to central servers, saving bandwidth.
+- Enhanced Security: Sensitive data can be processed locally, reducing exposure to external threats.
+- Scalability: Easier to scale as more edge devices can be added without overloading central systems.
+
+Future Trends
+- Increased AI Integration: More edge devices will incorporate AI for advanced analytics and decision-making.
+
+---
 layout: center
 class: w-[80%] m-auto
 ---
