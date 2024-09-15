@@ -132,6 +132,7 @@ What we are going to focus and learn about
 - 🎨 **API Scalability** - Why a scalability?
 - 🧑‍💻 **API Testing** - types of API Testing
 - 🤹 **Architectures** - How to work with different API arch as non backend developer.
+- 🛠 **Scaling Database** - Strategies to scale?
 - 🎥 **Serverless** - What is serverless and why to adopt?
 - 🎥 **Edge Functions** - Serve fast, personalized content with logic that executes at the edge.
 - 🛠 **Monorepo,Microservices** - virtually anything that's possible on a webpage is possible in Slidev
@@ -376,7 +377,7 @@ Your software should be ready to scale and adapt to future demands.
 
 ---
 layout: two-cols
-layoutClass: gap-16
+layoutClass: gap-4
 class: w-[80%] m-auto
 ---
 
@@ -384,7 +385,23 @@ class: w-[80%] m-auto
 
 API architecture is the framework of principles, practices, and patterns that guide the design, development, deployment, and maintenance of Application Programming Interfaces (APIs).
 
-<div v-click class="text-red-400">
+
+##### Choosing <span v-mark.underline.black>Technology</span> Overhead!
+<!--
+Technology overhead" refers to the additional complexity, resources, or effort required to manage, implement, or maintain a particular technology.  -->
+
+1.Learning curve for the technology<br/>
+2.Performance impact (CPU, memory usage)<br/>
+3.Setup, configuration, and integration efforts<br/>
+4.Maintenance (updates, bug fixes, etc.)<br/>
+5.Costs (licenses, infrastructure requirements)<br/>
+
+<!-- Technology overhead" refers to the additional complexity, resources, or effort required to manage, implement, or maintain a particular technology. This can include factors such as:
+
+
+Choosing technology overhead means considering these trade-offs when selecting tools, frameworks, or platforms for a project, to avoid unnecessary complications and ensure efficiency. -->
+
+<div v-click class="text-red-600 font-bold">
   Here are some common and popular API architectures :
 </div>
 
@@ -406,11 +423,261 @@ The title will be inferred from your slide content, or you can override it with 
 - GraphQL
 - Websocket
 - Webhook
+- RPC
 - tRPC
 - gRPC
+- (JSON|XML)-RPC
 - MQTT
 - Streaming API
 - SSE
+- Polling (long, short, and immediate)
+</div>
+
+
+
+---
+layout: image-right
+image: https://javatpoint-images.s3.eu-north-1.amazonaws.com/tutorial/soapui/images/soap-and-rest-web-services.png
+backgroundSize: 70%
+class: w-[80%] m-auto
+---
+
+
+# SOAP
+
+Simple Object Access Protocol
+
+Consider a large-scale financial institution needing to exchange transaction data securely with partners and customers. SOAP's robust security features and structured data exchange make it the ideal choice.
+
+---
+layout: image-right
+image: https://miro.medium.com/v2/resize:fit:788/1*m3jEkdc9SKTK6vNPhRHCqg.jpeg
+backgroundSize: 70%
+class: w-[80%] m-auto
+---
+
+
+# REST
+
+Representational State Transfer
+
+Building a public-facing travel booking platform? RESTful APIs simplify interaction with diverse clients, from web browsers to mobile apps, offering scalability for fluctuating demand.
+
+
+---
+layout: image-right
+image: https://miro.medium.com/v2/resize:fit:1400/1*5k5Q8gVGQcrUahmGxF2Yrw.png
+backgroundSize: 95%
+class: w-[80%] m-auto
+---
+
+# GraphQL
+
+Imagine a social media platform where users have unique data consumption preferences. GraphQL allows clients to fetch precisely the data they need in real-time, enhancing the user experience.
+
+
+
+---
+layout: image-right
+image: https://miro.medium.com/v2/resize:fit:1102/1*jUpzyKaUINeR79Y2rZ32_g.png
+backgroundSize: 95%
+class: w-[80%] m-auto
+---
+
+
+# WebSockets
+
+Picture a live sports commentary application. WebSockets maintain continuous connections, delivering real-time score updates and enabling instant interaction between users.
+
+
+---
+layout: image-right
+image: https://codeopinion.com/wp-content/uploads/2022/03/8-2.png
+backgroundSize: 95%
+class: w-[80%] m-auto
+---
+
+
+<!-- Webhooks System with Event Driven Architecture -->
+
+# Webhooks
+
+Managing an e-commerce platform? Webhooks notify your system of events like order placement or payment confirmation in real-time, triggering immediate actions.
+
+
+
+---
+layout: image-right
+image: https://grpc.io/img/landing-2.svg
+backgroundSize: 90%
+class: w-[80%] m-auto
+---
+
+# gRPC
+
+In a microservices architecture, efficient communication is crucial. gRPC's low-latency, high-throughput design ensures real-time data exchange between microservices, supporting rapid decision-making.
+
+---
+layout: image-right
+image: https://blog.cloudglance.dev/cover_imgs/trpc-openapi-hero.png
+backgroundSize: 95%
+class: w-[80%] m-auto
+---
+
+# tRPC
+
+In a microservices architecture, efficient communication is crucial. gRPC's low-latency, high-throughput design ensures real-time data exchange between microservices, supporting rapid decision-making.
+
+
+---
+layout: image-right
+image: https://www.researchgate.net/publication/313869515/figure/fig1/AS:669115723296771@1536541028275/The-architecture-of-MQTT.png
+backgroundSize: 95%
+class: w-[80%] m-auto
+---
+
+
+<!-- Webhooks System with Event Driven Architecture -->
+
+# MQTT
+
+Message Queuing Telemetry Transport
+
+Think of a remote weather station in a remote area with limited bandwidth. MQTT efficiently transmits real-time weather data over unreliable networks.
+
+
+
+---
+layout: image-right
+image: https://www.upsolver.com/wp-content/uploads/2022/01/pasted-image-0-1.png
+backgroundSize: 95%
+class: w-[80%] m-auto
+---
+
+# Streaming APIs
+
+Imagine a stock trading platform where users need live updates of stock prices. Streaming APIs deliver real-time data streams, allowing users to see price changes as they happen without refreshing the page.
+
+
+---
+layout: image-right
+image: https://miro.medium.com/v2/resize:fit:1400/0*DDJ2I6zuobU9At3v.png
+backgroundSize: 95%
+class: w-[80%] m-auto
+---
+
+
+# SSE
+
+Server Sent Events
+
+In a live news update application, SSE is used to push breaking news directly to the client. It provides a lightweight, efficient solution for server-to-client updates over HTTP, perfect for real-time news delivery.
+
+
+---
+layout: image-right
+image: https://www.softwarepragmatism.com/images/articles/five-minute-introduction-polling-events/polling_sequence_diagram.png
+backgroundSize: 95%
+class: w-[80%] m-auto
+---
+
+
+# Polling
+
+Long, Short, and Immediate
+
+A weather forecasting app uses polling to periodically request the latest weather data. While not as efficient as other methods, polling works well when the real-time updates are needed at regular intervals.
+
+
+---
+layout: image-right
+image: https://miro.medium.com/v2/resize:fit:1400/1*SAEqPgTmtd5F2QaqauwiCQ.png
+backgroundSize: 95%
+class: w-[80%] m-auto
+---
+
+
+# Push Notifications
+
+Mobile applications (e.g., a messaging app) use push notifications to deliver real-time messages or alerts to the user, even when the app isn't open.
+
+---
+layout: image-right
+image: https://cdn.prod.website-files.com/5ff66329429d880392f6cba2/61b76e7fdf48bbef0026f39a_JSON%20works.png
+backgroundSize: 95%
+class: w-[80%] m-auto
+---
+
+
+<!-- Webhooks System with Event Driven Architecture -->
+
+# JSON RPC
+
+Building a distributed system for online gaming? JSON-RPC streamlines communication between game servers, ensuring real-time synchronization.
+
+# XML RPC
+
+Consider an IoT (Internet of Things) application collecting data from various sensors. XML-RPC's simplicity and human-readability make it suitable for real-time data exchange.
+
+---
+layout: two-cols
+layoutClass: gap-16
+class: w-[80%] m-auto
+---
+
+<!-- ------  -->
+
+## Database Scaling
+
+<!-- Database architecture is the framework of principles, practices, and patterns that guide the design, development, deployment, and maintenance of databases. -->
+
+<img src="./public/images/dbscale.gif" />
+
+<!-- <div v-click class="text-purple-700">
+  Here are some common and popular API architectures :
+</div> -->
+
+<!-- 
+```html
+<Toc minDepth="1" maxDepth="1"></Toc>
+```
+
+The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter. -->
+
+::right::
+
+<!-- <Toc v-click minDepth="1" maxDepth="2"></Toc> -->
+
+<div v-click>
+
+- Indexing  ( Clustered , Non-Clustered )
+
+<!-- example toc, book ko agadi ko  
+ allowing the database to find rows quickly without scanning the entire table
+ -->
+
+<!-- Check the query patterns of your application and create the right indexes.  -->
+- Materialized Views
+<!-- Pre-compute complex query results and store them for faster access.  -->
+- Denormalization 
+<!-- Reduce complex joins to improve query performance.  -->
+- Vertical Scaling
+<!-- Boost your database server by adding more CPU, RAM, or storage.  -->
+- Database Sharding
+<!-- Split large tables into multiple smaller tables to improve query performance.  -->
+- Database Replication
+<!-- Create replicas of your primary database on different servers for scaling the reads.  -->
+<!-- Allow multiple instances of your database to replicate your data.  -->
+Caching
+<!-- boost speed with Semantic Cache -->
+<!-- Cache frequently used data to reduce server load. -->
+
+<!-- where the data is stored based on its meaning or query context rather than physical storage locations or simple key-value pairs. Instead of caching the result of specific queries, semantic caching focuses on storing parts of queries (sub-queries) and their results, so that when similar queries are made, they can be served using previously cached data. -->
+
+<!-- Partial Query Results: Stores portions of query results, allowing faster future queries that overlap with the cached ones.
+Efficient Cache Reuse: Handles similar queries by using previously cached fragments.
+Optimization: Reduces redundant database hits, optimizing query performance. -->
+
 </div>
 
 ---
@@ -619,6 +886,11 @@ class: w-[80%] m-auto
 
 ::left::
 
+<!-- Simplicity: Easier to develop, test, and deploy as a single application.
+Performance: No inter-service communication overhead, everything runs in-process.
+Less Overhead: Fewer infrastructure requirements compared to microservices.
+Easier Debugging: All components are in one codebase, making it easier to track issues. -->
+
 # Monolithic
 
 Monolithic architecture is a software design where the entire application is built as a single, unified unit.
@@ -631,7 +903,15 @@ Characteristics:
 - Everything deployed and scaled together
 
 
-Monorepo,
+Monorepo, Multi-tenant
+
+<!-- multi-tenant application is designed to serve multiple customers (tenants) using a single instance of the software. Each tenant's data is isolated and secure, while they share the application's resources and infrastructure. Tenants can be individuals, companies, or user groups, each having their unique configurations, such as UI, data storage, or authentication settings.
+
+Common approaches to multi-tenancy include:
+
+- Shared Database, Shared Schema: All tenants share the same database and tables, with tenant-specific data identified by a unique key.
+- Shared Database, Separate Schema: Each tenant has its own schema in a shared database.
+- Separate Database: Each tenant has a completely separate database. -->
 
 ::right::
 # Microservices
@@ -683,12 +963,23 @@ backgroundSize: 70%
 
 <img src="./public/images/microservice.png" class="w-[80%] m-auto" />
 
+
+---
+layout: image
+image: https://pbs.twimg.com/media/GQX2JMMXEAEB8Yi?format=jpg&name=medium
+class: w-[80%] m-auto
+backgroundSize: 30%
+---
+
+
 ---
 layout: center
 class: text-center
 ---
 
 # Any Questions?
+
+##### AI ra Remix ko chai paxi!!
 
 [Blog](https://nischal-dahal.com.np/blog) · [GitHub](https://github.com/broisnischal) 
 
