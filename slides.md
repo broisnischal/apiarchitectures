@@ -68,7 +68,7 @@ image: /images/qr.png
 <h1 class='leading-none'>Nischal Dahal</h1>
 
 - Software Engineer at <KBD>[AITC](https://aitc.ai/)</KBD>
-- <KBD>+4</KBD  > Years of Professional Experiences
+- <KBD>+4</KBD  > ( 2 Yrs Professional and 2 Self Experiences )
 - Nepal, Mainapokhari, Dolakha
 - Blog & Portfolio <KBD>[nischal-dahal.com](https://nischal-dahal.com.np)</KBD>
 - <span v-mark.underline.orange>Say Hi on</span> <KBD>[X - broisnees](https://x.com/broisnees)</KBD>, <span v-mark.underline.green> Follow me on</span> <KBD>[github.com/broisnischal](https://github.com/broisnischal)</KBD> and connect on Linkedin [broisnees](https://linked.com/in/broisnees)
@@ -176,6 +176,7 @@ How AI can be integrated in our application?
 
 ---
 
+
 ---
 level: 2
 class: w-[80%] m-auto
@@ -233,17 +234,32 @@ layout: two-cols
 <div v-click>Market the API</div>
 
 ---
-layout: two-cols-header
+layout: image-right
 class: w-[80%] m-auto
+image: https://www.mulesoft.com/sites/default/files/cmm_files/Best-Practices-for-Building-a-Secure-and-Scalable-API-02-AWS-load-balancing.png
+backgroundSize: 70%
+
 ---
 
-This spans both
 
-::left::
 
-# Left
+# API Scalability
 
-This shows on the left
+Scalability in API development is a bit like laying down the foundations for a new building; strong foundations are crucial for any future expansion.
+
+<div>
+  <ul>
+    <li>Statelessness</li>
+    <li>Loose Coupoling</li>
+    <li>Vertical and Horizontal Scaling</li>
+    <li>Resources oriented Design</li>
+    <li>Asynchronous Operations</li>
+    <li>Strategic Cacheing</li>
+    <li>Efficient Database Usage</li>
+    <li>Load Balancing & Rate Limiting</li>
+  </ul>
+</div>
+<br/>
 
 ::right::
 
@@ -254,29 +270,330 @@ This shows on the right
 ---
 layout: two-cols
 layoutClass: gap-16
+class: w-[80%] m-auto
 ---
 
-# Table of contents
+### API Scalability
 
-You can use the `Toc` component to generate a table of contents for your slides:
+<div v-click>
+  <h1>Statelessness</h1>
+  <p>
+  Each request is independent, reducing server memory load.
+  </p>
+</div>
 
+<div v-click>
+  <h1>Loose Coupling</h1>
+  <p>
+    Components interact with minimal dependencies, allowing easier scaling.
+  </p>
+</div>
+
+
+---
+layout: two-cols
+layoutClass: gap-16
+class: w-[80%] m-auto
+---
+
+
+<div>
+  <h1>Vertical & Horizontal Scaling</h1>
+  <p>
+    Add resources (vertical) or machines (horizontal) to meet growing demands.
+  </p>
+</div>
+
+<div v-click>
+  <h1>Resource-Oriented Design</h1>
+  <p>
+  Focus on data/services rather than actions.
+   
+  </p>
+</div>
+
+
+---
+layout: two-cols
+layoutClass: gap-16
+class: w-[80%] m-auto
+---
+
+
+<div>
+  <h1>Asynchronous Operations</h1>
+  <p>
+Non-blocking tasks improve efficiency.  </p>
+</div>
+
+<div v-click>
+  <h1>Strategic Caching</h1>
+  <p>
+Cache frequently used data to reduce server load.   
+  </p>
+</div>
+
+
+---
+layout: two-cols
+layoutClass: gap-16
+class: w-[80%] m-auto
+---
+
+
+<div>
+  <h1>Efficient Database Usage</h1>
+  <p>
+    Optimize queries and indexing for better performance.
+    </p>
+</div>
+<div v-click>
+  <h1>API Rate Limiting</h1>
+  <p>Control the number of requests to maintain performance.</p>
+</div>
+
+---
+layout: center
+class: w-[80%] m-auto
+---
+
+## Challenges in Scalable API Development
+
+- Legacy System Integration: Requires careful planning for seamless scaling.
+- Load Distribution: Dynamic resource allocation and load balancing are critical.
+- Data Consistency: Database sharding and replication help maintain reliability.
+- Security Measures: Scalable APIs require evolving security protocols.
+- Comprehensive Testing: Continuously test to ensure API performance under various conditions.
+
+<div v-click>
+
+## Conclusion
+
+Scalability is essential for API-driven success.
+Design with growth in mind and continuously improve.
+Your software should be ready to scale and adapt to future demands.
+</div>
+
+---
+layout: two-cols
+layoutClass: gap-16
+class: w-[80%] m-auto
+---
+
+# API Architectures
+
+API architecture is the framework of principles, practices, and patterns that guide the design, development, deployment, and maintenance of Application Programming Interfaces (APIs).
+
+<div v-click class="text-red-400">
+  Here are some common and popular API architectures :
+</div>
+
+<!-- 
 ```html
 <Toc minDepth="1" maxDepth="1"></Toc>
 ```
 
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
+The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter. -->
 
 ::right::
 
-<Toc v-click minDepth="1" maxDepth="2"></Toc>
+<!-- <Toc v-click minDepth="1" maxDepth="2"></Toc> -->
+
+<div v-click>
+
+- SOAP
+- REST
+- GraphQL
+- Websocket
+- Webhook
+- tRPC
+- gRPC
+- MQTT
+- Streaming API
+- SSE
+</div>
 
 ---
+layout: center
+class: w-[80%] m-auto
+---
 
+## API Testing
+
+API Testing is the process of validating and verifying Application Programming Interfaces (APIs). It ensures the API’s functionality, performance, reliability, and security. The focus is on checking requests and responses, data formats, and communication between systems, without a UI, to catch errors early and ensure seamless integration between components.
+
+Test Flight, Ad-hoc Testing, UI Testing, Exploratory Testing
+
+---
+layout: image
+class: w-[80%] m-auto
+image: https://i.ytimg.com/vi/qquIJ1Ivusg/maxresdefault.jpg
+backgroundSize: 70%
+---
+
+
+---
 layout: image-right
-image: https://cover.sli.dev
-
+image: https://www.zentao.pm/file.php?f=202012/f_4c07f77b56c63635a3e319245ba5d49d&t=png&o=&s=&v=1607586173
+backgroundSize: 70%
+class: w-[80%] m-auto
 ---
 
+
+# Functional Testing
+
+- Goal: Check whether the API meets its functionality requirements.
+- Example: Testing if an API correctly returns user information when called with the right ID.
+
+
+---
+layout: image-right
+image: https://wp.testbytes.net//wp-content/uploads/2020/04/Load-Testing-1.jpg
+backgroundSize: 70%
+class: w-[80%] m-auto
+---
+
+
+# Load Testing
+
+- Goal: Verify API performance under heavy traffic.
+- Example: Simulating multiple requests to ensure the API handles concurrent users efficiently.
+
+
+---
+layout: image-right
+image: https://brightsec.com/wp-content/uploads/2023/07/Slice-4-1024x472.png
+class: w-[80%] m-auto
+backgroundSize: 90%
+---
+
+
+# Security Testing
+
+- Goal: Protect the API against vulnerabilities.
+- Example: Ensuring the API enforces authentication and data encryption.
+
+---
+layout: image-right
+image: https://www.edureka.co/blog/wp-content/uploads/2019/01/Types2.png
+backgroundSize: 70%
+class: w-[80%] m-auto
+---
+
+
+# Penetration Testing
+
+- Goal: Simulate external attacks to identify potential security flaws.
+- Example: Checking for issues like SQL injection and broken authentication.
+
+---
+layout: image-right
+image: https://miro.medium.com/v2/resize:fit:1400/1*0G2M2EUIW45p2BSBR3hRQw.jpeg
+backgroundSize: 70%
+class: w-[80%] m-auto
+---
+
+
+# End-to-End Testing
+
+- Goal: Test a complete user flow that involves multiple APIs.
+- Example: Checking the user registration process from API to database and back.
+
+
+---
+layout: image-right
+image: https://www.opencodez.com/wp-content/uploads/2018/12/Performance_Testing_Types-1.png
+backgroundSize: 80%
+class: w-[80%] m-auto
+---
+
+
+## Runtime / Performance 
+
+- Goal: Monitor API behavior under execution to ensure performance.
+- Example: Checking API response times during peak load.
+
+---
+layout: image-right
+image: https://s3.amazonaws.com/algoworksupload/new-algoworks/wp-content/uploads/2016/04/26120022/uiTesting_mobileT.png
+backgroundSize: 70%
+class: w-[80%] m-auto
+---
+
+
+# UI Testing
+
+- Goal: Ensure smooth interaction between the frontend and API.
+- Example: Validating whether the UI displays correct data fetched from the API.
+
+---
+layout: image-right
+image: https://i.ytimg.com/vi/pcEy-4eZF6g/maxresdefault.jpg
+backgroundSize: 100%
+class: w-[80%] m-auto
+---
+
+
+# Fuzz Testing
+
+- Goal: Test the robustness of an API by sending random or invalid data.
+- Example: Ensuring that the API can gracefully handle unexpected input without crashing.
+
+
+---
+layout: center
+class: w-[80%] m-auto
+---
+
+## Best Practices for API Testing
+- Test Early and Often: Integrate API tests in CI/CD pipelines.
+- Automate: Use tools like Postman, SoapUI, or JMeter.
+- Monitor Performance: Use APM tools to track response times and system behavior.
+- Secure Your API: Implement authentication, authorization, and encryption checks.
+- Test in Different Scenarios: Consider edge cases, invalid inputs, and large data sets.
+
+
+---
+layout: iframe-right
+
+class: w-[80%] m-auto
+url: https://en.wikipedia.org/wiki/Serverless_computing
+---
+
+# Serverless
+
+Serverless is a cloud-native model where developers focus on writing code without managing underlying infrastructure.
+
+<!-- Serverless doesnot mean there is no server, it simply means that you don't operate your own server, typically building a server environment requires time and maintenance effort to make sure it's always running and bug free since you are responsible for that server. -->
+
+Advantages
+- Have not to worry about handles server management, scaling, and maintenance
+- Easy Integration
+- Less Maintenance
+- Simple Scaling
+- Focus on CODE rather than Infrastructure
+
+---
+layout: default
+class: w-[80%] m-auto
+---
+
+### Example Providers
+
+ AWS Lambda, Azure Functions, Google Cloud Functions
+
+## Example Use Case
+#### Real-time File Processing:
+
+- User uploads file to cloud storage (e.g., S3 bucket).
+- Triggers a Lambda function that processes and stores the result.
+- Scalable and cost-effective for on-demand processing tasks.
+
+
+---
+layout: center
+class: w-[80%] m-auto
+---
 # Code
 
 Use code snippets and get the highlighting directly, and even types hover![^1]
